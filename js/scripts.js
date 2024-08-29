@@ -6,6 +6,9 @@
 //
 // Scripts
 // 
+const lightbox = GLightbox({
+    selector: 'a[data-gallery="gallery1"]'
+});
 
 window.addEventListener('DOMContentLoaded', event => {
 
