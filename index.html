@@ -16,7 +16,7 @@
       property="og:description"
       content="Welcome to my portfolio website."
     />
-    <meta property="og:image" content="" />
+    <meta property="og:image" content />
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -30,11 +30,16 @@
       name="twitter:description"
       content="Welcome to my portfolio website."
     />
-    <meta name="twitter:image" content="" />
+    <meta name="twitter:image" content />
 
     <title>PORTFOLIO</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Flag Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css"
+    />
     <!-- Font Awesome icons (free version)-->
     <script
       src="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js"
@@ -70,7 +75,13 @@
       id="mainNav"
     >
       <div class="container">
-        <a class="navbar-brand" href="#page-top">PORTFOLIO</a>
+        <a
+          class="navbar-brand"
+          href="#page-top"
+          data-en="PORTFOLIO"
+          data-id="PORTOFOLIO"
+          >PORTFOLIO</a
+        >
         <button
           class="navbar-toggler text-uppercase font-weight-bold bg-white text-dark rounded"
           type="button"
@@ -86,19 +97,49 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio"
+              <a
+                class="nav-link py-3 px-0 px-lg-3 rounded"
+                href="#portfolio"
+                data-en="Portfolio"
+                data-id="Portofolio"
                 >Portfolio</a
               >
             </li>
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about"
+              <a
+                class="nav-link py-3 px-0 px-lg-3 rounded"
+                href="#about"
+                data-en="About"
+                data-id="Tentang"
                 >About</a
               >
             </li>
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact"
+              <a
+                class="nav-link py-3 px-0 px-lg-3 rounded"
+                href="#contact"
+                data-en="Contact"
+                data-id="Kontak"
                 >Contact</a
               >
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <div class="nav-link py-3 px-0 px-lg-3 rounded">
+                <div class="language-switcher ms-auto">
+                  <div class="form-check form-switch">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="languageToggle"
+                    />
+                    <label
+                      class="form-check-label text-white"
+                      for="languageToggle"
+                      ><span id="languageIcon" class="fi fi-us"></span
+                    ></label>
+                  </div>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
@@ -133,6 +174,8 @@
         <!-- Portfolio Section Heading-->
         <h2
           class="page-section-heading text-center text-uppercase text-primary mb-0"
+          data-en="Portfolio"
+          data-id="Portofolio"
         >
           Portfolio
         </h2>
@@ -197,7 +240,11 @@
     <section class="page-section bg-primary text-white mb-0" id="about">
       <div class="container">
         <!-- About Section Heading-->
-        <h2 class="page-section-heading text-center text-uppercase text-white">
+        <h2
+          class="page-section-heading text-center text-uppercase text-white"
+          data-en="About Me"
+          data-id="Tentang Saya"
+        >
           About ME
         </h2>
         <!-- Icon Divider-->
@@ -209,32 +256,23 @@
         <!-- About Section Content-->
         <div class="row">
           <div class="col-lg-4 ms-auto">
-            <p class="lead" style="text-align: justify">
-              I am a UI/UX Designer with 2 years of experience in designing
-              intuitive and engaging user interfaces and user experiences.
-              Throughout my career, I have worked on various projects involving
-              web and mobile application design, where I was responsible for
-              creating designs that are both flexible and functional.
-            </p>
+            <p
+              class="lead"
+              style="text-align: justify"
+              data-en="I am a UI/UX Designer with 2 years of experience in designing intuitive and engaging user interfaces and user experiences. Throughout my career, I have worked on various projects involving web and mobile application design, where I was responsible for creating designs that are both flexible and functional."
+              data-id="Saya seorang Desainer UI/UX dengan pengalaman 2 tahun dalam mendesain antarmuka pengguna dan pengalaman pengguna yang intuitif dan menarik. Sepanjang karier saya, saya telah mengerjakan berbagai proyek yang melibatkan desain aplikasi web dan seluler, di mana saya bertanggung jawab untuk menciptakan desain yang fleksibel dan fungsional."
+            ></p>
           </div>
           <div class="col-lg-4 me-auto">
-            <p class="lead" style="text-align: justify">
-              In addition to my design expertise, I possess foundational web
-              development skills, including PHP, HTML, CSS, JS, and SQL. Proficient
-              in tools like Figma, Inkscape, and GIMP, I strive to create design
-              solutions that are not only visually appealing but also functional
-              and aligned with business objectives. I am dedicated to delivering
-              user experiences that are both satisfying and effective.
-            </p>
+            <p
+              class="lead"
+              style="text-align: justify"
+              data-en="In addition to my design expertise, I possess foundational web development skills, including PHP, HTML, CSS, JS, and SQL. Proficient in tools like Figma, Inkscape, and GIMP, I strive to create design solutions that are not only visually appealing but also functional and aligned with business objectives. I am dedicated to delivering user experiences that are both satisfying and effective.
+            "
+              data-id="Selain keahlian desain saya, saya memiliki keterampilan pengembangan web dasar, termasuk PHP, HTML, CSS, JS, dan SQL. Mahir dalam alat-alat seperti Figma, Inkscape, dan GIMP, saya berusaha untuk menciptakan solusi desain yang tidak hanya menarik secara visual tetapi juga fungsional dan selaras dengan tujuan bisnis. Saya berdedikasi untuk memberikan pengalaman pengguna yang memuaskan dan efektif."
+            ></p>
           </div>
         </div>
-        <!-- About Section Button-->
-        <!-- <div class="text-center mt-4">
-                    <a class="btn btn-xl btn-outline-light" href="https://startbootstrap.com/theme/freelancer/">
-                        <i class="fas fa-download me-2"></i>
-                        Free Download!
-                    </a>
-                </div> -->
       </div>
     </section>
     <!-- Contact Section-->
@@ -243,6 +281,8 @@
         <!-- Contact Section Heading-->
         <h2
           class="page-section-heading text-center text-uppercase text-primary mb-0"
+          data-en="Contact Me"
+          data-id="Kontak Saya"
         >
           Contact Me
         </h2>
@@ -254,9 +294,11 @@
         </div>
         <!-- Contact Section Form-->
         <div class="row justify-content-center">
-          <p class="lead text-center">
-            Contact me on one of the platforms listed below.
-          </p>
+          <p
+            class="lead text-center"
+            data-en="Contact me on one of the platforms listed below."
+            data-id="Hubungi saya melalui salah satu platform yang tercantum di bawah ini."
+          ></p>
         </div>
         <div class="row justify-content-center">
           <div class="col-md-6 col-lg-4 mb-5">
@@ -325,64 +367,6 @@
               />
             </a>
           </div>
-          <!-- https://t.me/ndaru_ls
-                     <div class="col-lg-8 col-xl-7 text-center">
-                    <a target="_blank" href="//wa.me/6285693784773" class="btn btn-primary btn-lg rounded-1"><i class="fa-brands fa-whatsapp"></i> Whatsapp</a>
-                    <a target="_blank" href="//mailto:ndarulanggeng110@gmail.com" class="btn btn-danger btn-lg rounded-1"><i class="fa-regular fa-envelope"></i> Gmail</a>
-                </div> -->
-
-          <!-- <div class="col-lg-8 col-xl-7">
-                     * * * * * * * * * * * * * * *
-                     * * SB Forms Contact Form * *
-                     * * * * * * * * * * * * * * *
-                     This form is pre-integrated with SB Forms.
-                     To make this form functional, sign up at
-                     https://startbootstrap.com/solution/contact-forms
-                     to get an API token!
-                    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="name" type="text" placeholder="Enter your name..."
-                                data-sb-validations="required" />
-                            <label for="name">Full name</label>
-                            <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="email" type="email" placeholder="name@example.com"
-                                data-sb-validations="required,email" />
-                            <label for="email">Email address</label>
-                            <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                            <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890"
-                                data-sb-validations="required" />
-                            <label for="phone">Phone number</label>
-                            <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.
-                            </div>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <textarea class="form-control" id="message" type="text"
-                                placeholder="Enter your message here..." style="height: 10rem"
-                                data-sb-validations="required"></textarea>
-                            <label for="message">Message</label>
-                            <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.
-                            </div>
-                        </div>
-                        <div class="d-none" id="submitSuccessMessage">
-                            <div class="text-center mb-3">
-                                <div class="fw-bolder">Form submission successful!</div>
-                                To activate this form, sign up at
-                                <br />
-                                <a
-                                    href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                            </div>
-                        </div>
-                        <div class="d-none" id="submitErrorMessage">
-                            <div class="text-center text-danger mb-3">Error sending message!</div>
-                        </div>
-                        <button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Send</button>
-                    </form>
-                </div> -->
         </div>
       </div>
     </section>
@@ -392,22 +376,39 @@
         <div class="row">
           <!-- Footer Location-->
           <div class="col-lg-4 mb-5 mb-lg-0">
-            <h4 class="text-uppercase mb-4">Location</h4>
-            <p class="lead mb-0">
-              Indonesia. Banten. Kab, Tangerang, Curug, Curug Kulon
+            <h4
+              class="text-uppercase mb-4"
+              data-en="Location"
+              data-id="Lokasi Saya"
+            ></h4>
+            <p
+              class="lead mb-0"
+              data-en="Indonesia, Banten Province, Tangerang Regency, Curug District, Curug Kulon Village."
+              data-id="Indonesia, Provinsi Banten, Kabupaten Tangerang, Kecamatan Curug, Desa Curug Kulon."
+            >
+              Indonesia, Provinsi Banten, Kabupaten Tangerang, Kecamatan Curug,
+              Desa Curug Kulon.
             </p>
           </div>
           <!-- Footer Social Icons-->
           <div class="col-lg-4 mb-5 mb-lg-0">
-            <h4 class="text-uppercase mb-4">Around the Web</h4>
+            <h4
+              class="text-uppercase mb-4"
+              data-en="Around the Web"
+              data-id="Temukan Saya Di"
+            ></h4>
             <a
               class="btn btn-outline-light btn-social mx-1"
               href="//www.instagram.com/santosa.44"
               target="_blank"
               ><i class="fab fa-fw fa-instagram"></i
             ></a>
-            <!-- <a class="btn btn-outline-light btn-social mx-1" href="#!"><i
-                            class="fab fa-fw fa-x-twitter"></i></a> -->
+            <a
+              class="btn btn-outline-light btn-social mx-1"
+              href="//dribbble.com/Ndaru244"
+              target="_blank"
+              ><i class="fab fa-fw fa-dribbble"></i
+            ></a>
             <a
               class="btn btn-outline-light btn-social mx-1"
               href="//www.linkedin.com/in/ndaru-langgeng-santosa-2b926b1a6/"
@@ -422,11 +423,19 @@
           </div>
           <!-- Footer About Text-->
           <div class="col-lg-4">
-            <h4 class="text-uppercase mb-4">Theme License</h4>
+            <h4
+              class="text-uppercase mb-4"
+              data-en="Theme License"
+              data-id="Lisensi Tema"
+            ></h4>
             <p class="lead mb-0">
               <a target="_blank" href="//startbootstrap.com/theme/freelancer"
                 >Freelance Theme</a
-              >, MIT licensed Bootstrap theme created by
+              >,
+              <text
+                data-en="MIT licensed Bootstrap theme created by"
+                data-id="Tema Bootstrap berlisensi MIT yang dibuat oleh"
+              ></text>
               <a target="_blank" href="//startbootstrap.com">Bootstrap</a>
               .
             </p>
@@ -495,43 +504,48 @@
                   <!-- Portfolio Modal - Timeline-->
                   <div class="text-start">
                     <div class="mb-5">
-                      <h4 class="text-center mb-4">
-                        Work History at PT Bhineka Alam Nusantara on the SIALAM
-                        Product as a UI/UX Designer
-                      </h4>
+                      <h4
+                        class="text-center mb-4"
+                        data-en="Work History at PT Bhineka Alam Nusantara on the SIALAM
+                      Product as a UI/UX Designer"
+                        0
+                        data-id="Riwayat Pekerjaan di PT Bhineka Alam Nusantara pada SIALAM
+                      Produk sebagai Desainer UI/UX"
+                      ></h4>
                       <div class="row">
                         <div class="col-lg">
                           <p><strong>Sep 2022 - Mei 2023</strong></p>
                           <ul>
-                            <li>
-                              Performed research to inform the design of the
-                              business system.
-                            </li>
-                            <li>
-                              Designed a visually appealing and functional user
-                              interface for the application.
-                            </li>
-                            <li>
-                              Developed a prototype that facilitates user
-                              interaction.
-                            </li>
+                            <li
+                              data-en="Performed research to inform the design of the business system."
+                              data-id="Melakukan penelitian untuk menginformasikan desain sistem bisnis."
+                            ></li>
+                            <li
+                              data-en="Designed a visually appealing and functional user interface for the application."
+                              data-id="Merancang antarmuka pengguna yang menarik secara visual dan fungsional untuk aplikasi."
+                            ></li>
+                            <li
+                              data-en="Developed a prototype that facilitates user interaction."
+                              data-id="Mengembangkan prototipe yang memfasilitasi interaksi pengguna."
+                            ></li>
                           </ul>
                         </div>
                         <div class="col-lg">
                           <p><strong>Sep 2023 - Feb 2024</strong></p>
                           <ul>
-                            <li>
-                              Redesigned the login, registration, and profile
-                              pages to improve user flow and reduce friction.
-                            </li>
-                            <li>
-                              Created a new design system for product details to
-                              enhance clarity and comprehension.
-                            </li>
-                            <li>
-                              Optimized the checkout experience to minimize user
-                              effort and maximize conversions.
-                            </li>
+                            <li
+                              data-en="Redesigned the login, registration, and profile pages to improve user flow and reduce friction."
+                              data-id="Mendesain ulang halaman login, registrasi, dan profil untuk meningkatkan alur pengguna dan mengurangi hambatan.
+                            "
+                            ></li>
+                            <li
+                              data-en="Created a new design system for product details to enhance clarity and comprehension."
+                              data-id="Menciptakan sistem desain baru untuk detail produk guna meningkatkan kejelasan dan pemahaman."
+                            ></li>
+                            <li
+                              data-en="Optimized the checkout experience to minimize user effort and maximize conversions."
+                              data-id="Mengoptimalkan pengalaman checkout untuk meminimalkan upaya pengguna dan memaksimalkan konversi."
+                            ></li>
                           </ul>
                         </div>
                       </div>
@@ -539,7 +553,10 @@
                   </div>
                   <!-- Portfolio Modal - Image Preview-->
                   <div class="row">
-                    <h4>Preview</h4>
+                    <h4
+                      data-en="Project Preview"
+                      data-id="Pratinjau Proyek"
+                    ></h4>
                     <div class="col-lg mb-3">
                       <h5 class="text-primary mb-2">Product Design Preview</h5>
                       <a
@@ -650,10 +667,5 @@
     <script src="//cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
-    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-    <!-- * *                               SB Forms JS                               * *-->
-    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-    <script src="//cdn.startbootstrap.com/sb-forms-latest.js"></script>
   </body>
 </html>
