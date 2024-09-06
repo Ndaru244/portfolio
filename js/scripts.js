@@ -8,6 +8,7 @@
 //
 const lightbox = GLightbox({
   selector: 'a[data-gallery="gallery1"]',
+  selector: 'a[data-gallery="gallery2"]',
 });
 
 document
