@@ -6,8 +6,12 @@
 //
 // Scripts
 //
-const lightbox = GLightbox({
+const lightbox1 = GLightbox({
   selector: 'a[data-gallery="gallery1"]',
+});
+
+const lightbox2 = GLightbox({
+  selector: 'a[data-gallery="gallery2"]',
 });
 
 document
