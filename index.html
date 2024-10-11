@@ -2,30 +2,60 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="I design intuitive and engaging user interfaces and user experiences." />
-    <meta name="keywords" content="UI/UX Designer, Web Developer, Portfolio, Ndaru L Santosa, Creative Designer, Front-end Developer" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="I design intuitive and engaging user interfaces and user experiences."
+    />
+    <meta
+      name="keywords"
+      content="UI/UX Designer, Web Developer, Portfolio, Ndaru L Santosa, Creative Designer, Front-end Developer"
+    />
     <meta name="author" content="Ndaru L Santosa" />
 
     <!-- Title for SEO -->
     <title>My Portfolio, Ndaru L Santosa | UI/UX Designer, Web Developer</title>
-    
+
     <!-- Facebook Meta Tags -->
     <meta property="og:url" content="https://ndaru244.github.io/portfolio/" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="My Portfolio, Ndaru L Santosa | UI/UX Designer, Web Developer" />
-    <meta property="og:description" content="I design intuitive and engaging user interfaces and user experiences." />
-    <meta property="og:image" content="https://ndaru244.github.io/portfolio/assets/meta-image.png" />
+    <meta
+      property="og:title"
+      content="My Portfolio, Ndaru L Santosa | UI/UX Designer, Web Developer"
+    />
+    <meta
+      property="og:description"
+      content="I design intuitive and engaging user interfaces and user experiences."
+    />
+    <meta
+      property="og:image"
+      content="https://ndaru244.github.io/portfolio/assets/meta-image.png"
+    />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    
+
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta property="twitter:domain" content="ndaru244.github.io" />
-    <meta property="twitter:url" content="https://ndaru244.github.io/portfolio/" />
-    <meta name="twitter:title" content="My Portfolio, Ndaru L Santosa | UI/UX Designer, Web Developer" />
-    <meta name="twitter:description" content="I design intuitive and engaging user interfaces and user experiences." />
-    <meta name="twitter:image" content="https://ndaru244.github.io/portfolio/assets/meta-image.png" />
+    <meta
+      property="twitter:url"
+      content="https://ndaru244.github.io/portfolio/"
+    />
+    <meta
+      name="twitter:title"
+      content="My Portfolio, Ndaru L Santosa | UI/UX Designer, Web Developer"
+    />
+    <meta
+      name="twitter:description"
+      content="I design intuitive and engaging user interfaces and user experiences."
+    />
+    <meta
+      name="twitter:image"
+      content="https://ndaru244.github.io/portfolio/assets/meta-image.png"
+    />
 
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/Logo.png" />
@@ -54,6 +84,7 @@
       type="text/css"
     />
     <!-- Core theme CSS (includes Bootstrap)-->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
     <link href="css/styles.css" rel="stylesheet" />
     <!-- GLightbox CSS -->
     <link
@@ -69,11 +100,7 @@
       id="mainNav"
     >
       <div class="container">
-        <a
-          class="navbar-brand"
-          href="#page-top"
-          data-en="PORTFOLIO"
-          data-id="PORTOFOLIO"
+        <a class="navbar-brand" href="#page-top" data-key="navbar.portfolio"
           >PORTFOLIO</a
         >
         <button
@@ -94,8 +121,7 @@
               <a
                 class="nav-link py-3 px-0 px-lg-3 rounded"
                 href="#portfolio"
-                data-en="Portfolio"
-                data-id="Portofolio"
+                data-key="navbar.portfolio"
                 >Portfolio</a
               >
             </li>
@@ -103,8 +129,7 @@
               <a
                 class="nav-link py-3 px-0 px-lg-3 rounded"
                 href="#about"
-                data-en="About"
-                data-id="Tentang"
+                data-key="navbar.about"
                 >About</a
               >
             </li>
@@ -112,8 +137,7 @@
               <a
                 class="nav-link py-3 px-0 px-lg-3 rounded"
                 href="#contact"
-                data-en="Contact"
-                data-id="Kontak"
+                data-key="navbar.contact"
                 >Contact</a
               >
             </li>
@@ -139,6 +163,7 @@
         </div>
       </div>
     </nav>
+
     <!-- Masthead-->
     <header class="masthead bg-primary text-white text-center">
       <div class="container d-flex align-items-center flex-column">
@@ -162,14 +187,14 @@
         </p>
       </div>
     </header>
+
     <!-- Portfolio Section-->
     <section class="page-section portfolio" id="portfolio">
       <div class="container">
         <!-- Portfolio Section Heading-->
         <h2
           class="page-section-heading text-center text-uppercase text-primary mb-0"
-          data-en="Portfolio"
-          data-id="Portofolio"
+          data-key="portfolio.heading"
         >
           Portfolio
         </h2>
@@ -230,14 +255,14 @@
         </div>
       </div>
     </section>
+
     <!-- About Section-->
     <section class="page-section bg-primary text-white mb-0" id="about">
       <div class="container">
         <!-- About Section Heading-->
         <h2
           class="page-section-heading text-center text-uppercase text-white"
-          data-en="About Me"
-          data-id="Tentang Saya"
+          data-key="about.heading"
         >
           About ME
         </h2>
@@ -253,30 +278,27 @@
             <p
               class="lead"
               style="text-align: justify"
-              data-en="I am a UI/UX Designer with 2 years of experience in designing intuitive and engaging user interfaces and user experiences. Throughout my career, I have worked on various projects involving web and mobile application design, where I was responsible for creating designs that are both flexible and functional."
-              data-id="Saya seorang Desainer UI/UX dengan pengalaman 2 tahun dalam mendesain antarmuka pengguna dan pengalaman pengguna yang intuitif dan menarik. Sepanjang karier saya, saya telah mengerjakan berbagai proyek yang melibatkan desain aplikasi web dan seluler, di mana saya bertanggung jawab untuk menciptakan desain yang fleksibel dan fungsional."
+              data-key="about.content.0"
             ></p>
           </div>
           <div class="col-lg-4 me-auto">
             <p
               class="lead"
               style="text-align: justify"
-              data-en="In addition to my design expertise, I possess foundational web development skills, including PHP, HTML, CSS, JS, and SQL. Proficient in tools like Figma, Inkscape, and GIMP, I strive to create design solutions that are not only visually appealing but also functional and aligned with business objectives. I am dedicated to delivering user experiences that are both satisfying and effective.
-            "
-              data-id="Selain keahlian desain saya, saya memiliki keterampilan pengembangan web dasar, termasuk PHP, HTML, CSS, JS, dan SQL. Mahir dalam alat-alat seperti Figma, Inkscape, dan GIMP, saya berusaha untuk menciptakan solusi desain yang tidak hanya menarik secara visual tetapi juga fungsional dan selaras dengan tujuan bisnis. Saya berdedikasi untuk memberikan pengalaman pengguna yang memuaskan dan efektif."
+              data-key="about.content.1"
             ></p>
           </div>
         </div>
       </div>
     </section>
+
     <!-- Contact Section-->
     <section class="page-section portfolio" id="contact">
       <div class="container">
         <!-- Contact Section Heading-->
         <h2
           class="page-section-heading text-center text-uppercase text-primary mb-0"
-          data-en="Contact Me"
-          data-id="Kontak Saya"
+          data-key="contact.heading"
         >
           Contact Me
         </h2>
@@ -288,11 +310,7 @@
         </div>
         <!-- Contact Section Form-->
         <div class="row justify-content-center">
-          <p
-            class="lead text-center"
-            data-en="Contact me on one of the platforms listed below."
-            data-id="Hubungi saya melalui salah satu platform yang tercantum di bawah ini."
-          ></p>
+          <p class="lead text-center" data-key="contact.content"></p>
         </div>
         <div class="row justify-content-center">
           <div class="col-md-6 col-lg-4 mb-5">
@@ -364,22 +382,18 @@
         </div>
       </div>
     </section>
+    \
+
     <!-- Footer-->
     <footer class="footer text-center">
       <div class="container">
         <div class="row">
           <!-- Footer Location-->
           <div class="col-lg-4 mb-5 mb-lg-0">
-            <h4
-              class="text-uppercase mb-4"
-              data-en="Location"
-              data-id="Lokasi Saya"
-            ></h4>
-            <p
-              class="lead mb-0"
-              data-en="Indonesia, Banten Province, Tangerang Regency, Curug District, Curug Kulon Village."
-              data-id="Indonesia, Provinsi Banten, Kabupaten Tangerang, Kecamatan Curug, Desa Curug Kulon."
-            >
+            <h4 class="text-uppercase mb-4" data-key="footer.location.heading">
+              Location
+            </h4>
+            <p class="lead mb-0" data-key="footer.location.content">
               Indonesia, Provinsi Banten, Kabupaten Tangerang, Kecamatan Curug,
               Desa Curug Kulon.
             </p>
@@ -388,8 +402,7 @@
           <div class="col-lg-4 mb-5 mb-lg-0">
             <h4
               class="text-uppercase mb-4"
-              data-en="Around the Web"
-              data-id="Temukan Saya Di"
+              data-key="footer.social.heading"
             ></h4>
             <a
               class="btn btn-outline-light btn-social mx-1"
@@ -406,6 +419,7 @@
             <a
               class="btn btn-outline-light btn-social mx-1"
               href="//www.linkedin.com/in/ndaru-langgeng-santosa-2b926b1a6/"
+              target="_blank"
               ><i class="fab fa-fw fa-linkedin-in"></i
             ></a>
             <a
@@ -419,17 +433,13 @@
           <div class="col-lg-4">
             <h4
               class="text-uppercase mb-4"
-              data-en="Theme License"
-              data-id="Lisensi Tema"
+              data-key="footer.theme_license.heading"
             ></h4>
             <p class="lead mb-0">
               <a target="_blank" href="//startbootstrap.com/theme/freelancer"
                 >Freelance Theme</a
               >,
-              <text
-                data-en="MIT licensed Bootstrap theme created by"
-                data-id="Tema Bootstrap berlisensi MIT yang dibuat oleh"
-              ></text>
+              <text data-key="footer.theme_license.content"></text>
               <a target="_blank" href="//startbootstrap.com">Bootstrap</a>
               .
             </p>
@@ -437,6 +447,7 @@
         </div>
       </div>
     </footer>
+
     <!-- Copyright Section-->
     <div class="copyright py-4 text-center text-white">
       <div class="container">
@@ -448,6 +459,7 @@
         </small>
       </div>
     </div>
+
     <!-- Portfolio Modals-->
     <!-- Portfolio Modal 1-->
     <div
@@ -474,11 +486,15 @@
                   <!-- Portfolio Modal - Title-->
                   <h2
                     class="portfolio-modal-title text-uppercase text-primary mb-0"
+                    data-key="portfolio.contents.sialam.title"
                   >
                     sialam
                   </h2>
                   <!-- <hr class="border border-white border-2 opacity-75"> -->
-                  <h6 class="text-uppercase text-primary mt-3 mb-0">
+                  <h6
+                    class="text-uppercase text-primary mt-3 mb-0"
+                    data-key="portfolio.contents.sialam.company"
+                  >
                     PT. Bhinneka Alam Nusantara
                   </h6>
                   <!-- Icon Divider-->
@@ -500,45 +516,63 @@
                     <div class="mb-5">
                       <h4
                         class="text-center mb-4"
-                        data-en="Work History at PT Bhineka Alam Nusantara on the SIALAM
-                      Product as a UI/UX Designer"
-                        0
-                        data-id="Riwayat Pekerjaan di PT Bhineka Alam Nusantara pada SIALAM
-                      Produk sebagai Desainer UI/UX"
+                        data-key="portfolio.contents.sialam.description"
                       ></h4>
                       <div class="row">
                         <div class="col-lg">
-                          <p><strong>Sep 2022 - Mei 2023</strong></p>
+                          <p>
+                            <strong
+                              data-key="portfolio.contents.sialam.timeline.period1.dates"
+                              >Sep 2022 - Mei 2023</strong
+                            >
+                          </p>
                           <ul>
                             <li
-                              data-en="Performed research to inform the design of the business system."
-                              data-id="Melakukan penelitian untuk menginformasikan desain sistem bisnis."
+                              data-key="portfolio.contents.sialam.timeline.period1.tasks.0"
                             ></li>
                             <li
-                              data-en="Designed a visually appealing and functional user interface for the application."
-                              data-id="Merancang antarmuka pengguna yang menarik secara visual dan fungsional untuk aplikasi."
+                              data-key="portfolio.contents.sialam.timeline.period1.tasks.1"
                             ></li>
                             <li
-                              data-en="Developed a prototype that facilitates user interaction."
-                              data-id="Mengembangkan prototipe yang memfasilitasi interaksi pengguna."
+                              data-key="portfolio.contents.sialam.timeline.period1.tasks.2"
                             ></li>
                           </ul>
                         </div>
                         <div class="col-lg">
-                          <p><strong>Sep 2023 - Feb 2024</strong></p>
+                          <p>
+                            <strong
+                              data-key="portfolio.contents.sialam.timeline.period2.dates"
+                              >Sep 2023 - Feb 2024</strong
+                            >
+                          </p>
                           <ul>
                             <li
-                              data-en="Redesigned the login, registration, and profile pages to improve user flow and reduce friction."
-                              data-id="Mendesain ulang halaman login, registrasi, dan profil untuk meningkatkan alur pengguna dan mengurangi hambatan.
-                            "
+                              data-key="portfolio.contents.sialam.timeline.period2.tasks.0"
                             ></li>
                             <li
-                              data-en="Created a new design system for product details to enhance clarity and comprehension."
-                              data-id="Menciptakan sistem desain baru untuk detail produk guna meningkatkan kejelasan dan pemahaman."
+                              data-key="portfolio.contents.sialam.timeline.period2.tasks.1"
                             ></li>
                             <li
-                              data-en="Optimized the checkout experience to minimize user effort and maximize conversions."
-                              data-id="Mengoptimalkan pengalaman checkout untuk meminimalkan upaya pengguna dan memaksimalkan konversi."
+                              data-key="portfolio.contents.sialam.timeline.period2.tasks.2"
+                            ></li>
+                          </ul>
+                        </div>
+                        <div class="col-lg">
+                          <p>
+                            <strong
+                              data-key="portfolio.contents.sialam.timeline.period3.dates"
+                              >Sep 2023 - Feb 2024</strong
+                            >
+                          </p>
+                          <ul>
+                            <li
+                              data-key="portfolio.contents.sialam.timeline.period3.tasks.0"
+                            ></li>
+                            <li
+                              data-key="portfolio.contents.sialam.timeline.period3.tasks.1"
+                            ></li>
+                            <li
+                              data-key="portfolio.contents.sialam.timeline.period3.tasks.2"
                             ></li>
                           </ul>
                         </div>
@@ -547,10 +581,7 @@
                   </div>
                   <!-- Portfolio Modal - Image Preview-->
                   <div class="row">
-                    <h4
-                      data-en="Project Preview"
-                      data-id="Pratinjau Proyek"
-                    ></h4>
+                    <h4 data-key="portfolio.contents.preview"></h4>
                     <div class="col-lg mb-3">
                       <h5 class="text-primary mb-2">Product Design Preview</h5>
                       <a
@@ -619,8 +650,7 @@
                   <!-- Portfolio Modal - Title-->
                   <h2
                     class="portfolio-modal-title text-primary text-uppercase mb-0"
-                    data-en="Omhut Self Service Web App"
-                    data-id="Aplikasi Web Layanan Mandiri Omhut"
+                    data-key="portfolio.contents.omhut.title"
                   ></h2>
                   <!-- Icon Divider-->
                   <div class="divider-custom">
@@ -631,25 +661,27 @@
                     <div class="divider-custom-line"></div>
                   </div>
                   <!-- Portfolio Modal - Image-->
-                  <img
-                    class="img-fluid rounded mb-5"
-                    src="assets/img/preview/Omhut.png"
-                    alt="..."
-                  />
+                  <a
+                    href="assets/img/preview/Omhut.png"
+                    data-gallery="gallery2"
+                    data-glightbox="title: Omhut-Preview.png;"
+                  >
+                    <img
+                      class="img-fluid rounded mb-5"
+                      src="assets/img/preview/Omhut.png"
+                      alt="..."
+                    />
+                  </a>
                   <!-- Portfolio Modal - Text-->
                   <div class="text-start">
                     <div class="row mb-5">
                       <div class="col-lg" style="text-align: justify">
                         <p
-                          data-en="This web application is designed to simplify and speed up the ordering process at Omhut Parkopi coffee shop. With an intuitive and user-friendly interface, customers can easily select menu items and track the status of their orders. On the other hand, the coffee shop staff can efficiently process orders and manage the menu through an integrated dashboard. The application is built using the CodeIgniter 3 framework and uses MySQL as its database."
-                          data-id="Aplikasi web ini dirancang untuk mempermudah dan mempercepat proses pemesanan di kedai kopi Omhut Parkopi. Dengan tampilan yang intuitif dan user-friendly, pelanggan dapat dengan mudah memilih menu, dan melacak status pesanan mereka. Di sisi lain, pegawai kedai kopi dapat dengan efisien memproses pesanan dan mengelola menu melalui dashboard yang terintegrasi. Aplikasi ini dibangun menggunakan framework codeigniter 3, dan menggunakan mysql sebagai databasenya."
+                          data-key="portfolio.contents.omhut.description.0"
                         ></p>
                       </div>
                       <div class="col-lg" style="text-align: justify">
-                        <text
-                          data-en="As an Information Systems student at Esa Unggul University, I developed the Omhut Parkopi coffee ordering web application as part of my final project. This project allowed me to apply the knowledge I've gained in web development. Additionally, it provided an opportunity to solve real-world problems faced by small businesses. You can try out the application by downloading the project from my GitHub at "
-                          data-id="Sebagai mahasiswa Sistem Informasi di Universitas Esa Unggul, saya telah mengembangkan aplikasi web pemesanan kopi Omhut Parkopi sebagai bagian dari tugas akhir. Proyek ini memungkinkan saya untuk menerapkan pengetahuan yang telah saya peroleh dalam bidang pengembangan web. Selain itu, proyek ini juga memberikan kesempatan bagi saya untuk memecahkan masalah nyata yang dihadapi oleh bisnis kecil. Anda dapat mencoba aplikasi ini dengan mengunduh proyek sumber terbuka dari GitHub saya di"
-                        >
+                        <text data-key="portfolio.contents.omhut.description.1">
                         </text>
                         <a
                           target="_blank"
@@ -662,10 +694,7 @@
                   </div>
                   <!-- Portfolio Modal - Image Preview-->
                   <div class="row">
-                    <h4 class="mb-3"
-                      data-en="Project Preview"
-                      data-id="Pratinjau Proyek"
-                    ></h4>
+                    <h4 class="mb-3" data-key="portfolio.contents.preview"></h4>
                     <div class="col-lg mb-3">
                       <a
                         href="assets/img/preview/Omhut-Preview-1.png"
@@ -694,7 +723,10 @@
                     </div>
                   </div>
                   <p class="mb-4"></p>
-                  <button class="btn btn-outline-dark btn-lg" data-bs-dismiss="modal">
+                  <button
+                    class="btn btn-outline-dark btn-lg"
+                    data-bs-dismiss="modal"
+                  >
                     <i class="fas fa-times fa-fw me-2"></i>
                     Close Window
                   </button>
