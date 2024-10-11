@@ -14,26 +14,50 @@ const lightbox2 = GLightbox({
   selector: 'a[data-gallery="gallery2"]',
 });
 
+// load language JSON
+function loadLanguageData() {
+  return fetch("languages.json")
+    .then((response) => response.json())
+    .catch((error) => console.error("Error loading languages:", error));
+}
+
+function updateLanguage(language, languageData) {
+  document.querySelectorAll("[data-key]").forEach((element) => {
+    const key = element.getAttribute("data-key");
+    const keys = key.split(".");
+    let translation = languageData[language];
+
+    keys.forEach((k) => {
+      translation = translation[k];
+    });
+
+    if (translation) {
+      element.innerHTML = translation;
+    }
+  });
+}
+
+// Language switcher
 document
   .getElementById("languageToggle")
   .addEventListener("change", function () {
-    const isEnglish = this.checked;
-    const elements = document.querySelectorAll("[data-en]");
-    const languageIcon = document.getElementById("languageIcon");
+    const language = this.checked ? "en" : "id";
 
-    elements.forEach((element) => {
-      if (isEnglish) {
-        element.textContent = element.getAttribute("data-en");
-        languageIcon.className = "fi fi-us"; // Change to US flag for English
-      } else {
-        element.textContent = element.getAttribute("data-id");
-        languageIcon.className = "fi fi-id"; // Change to Indonesia flag for Bahasa
-      }
+    loadLanguageData().then((languageData) => {
+      updateLanguage(language, languageData);
+
+      const languageIcon = document.getElementById("languageIcon");
+      languageIcon.classList.toggle("fi-us", language === "en");
+      languageIcon.classList.toggle("fi-id", language === "id");
     });
-
-    // Simpan preferensi bahasa di localStorage
-    localStorage.setItem("language", isEnglish ? "en" : "id");
   });
+
+// Load default language
+document.addEventListener("DOMContentLoaded", function () {
+  loadLanguageData().then((languageData) => {
+    updateLanguage("en", languageData);
+  });
+});
 
 // Set language based on previous selection
 document.addEventListener("DOMContentLoaded", function () {
@@ -42,19 +66,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const isEnglish = savedLang === "en";
 
   languageToggle.checked = isEnglish;
-  languageToggle.dispatchEvent(new Event("change")); // Apply saved language
+  languageToggle.dispatchEvent(new Event("change"));
 });
 
 window.addEventListener("DOMContentLoaded", (event) => {
-  let savedLang = localStorage.getItem("language");
-  if (!savedLang) {
-    savedLang = "en";
-    localStorage.setItem("language", "en");
-  }
-  const languageToggle = document.getElementById("languageToggle");
-  const isEnglish = savedLang === "en";
-  languageToggle.checked = isEnglish;
-  languageToggle.dispatchEvent(new Event("change"));
 
   // Navbar shrink function
   var navbarShrink = function () {
