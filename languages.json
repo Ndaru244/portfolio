@@ -16,25 +16,27 @@
             "period1": {
               "dates": "Sep 2022 - Mei 2023",
               "tasks": [
-                "Performed research to inform the design of the business system.",
-                "Designed a visually appealing and functional user interface for the application.",
-                "Developed a prototype that facilitates user interaction."
+                "Collaborated with the Product Manager and Business Analyst to define system design requirements.",
+                "Established design patterns for the SIALAM mobile application.",
+                "Designed the user interface (UI) for the SIALAM mobile application.",
+                "Created a prototype for the SIALAM mobile application."
               ]
             },
             "period2": {
               "dates": "Mei 2023 - Jul 2023",
               "tasks": [
-                "Create Design System or pattern design for mobile ui.",
-                "Designed a visually appealing and functional user interface for the landing page website.",
-                "Developed a prototype that facilitates user interaction."
+                "Designed the user interface (UI) for the SIALAM web landing page.",
+                "Created a prototype for the SIALAM web landing page.",
+                "Developed an application flow design to improve readability for developers.",
+                "Conducted a design review for the SIALAM mobile application."
               ]
             },
             "period3": {
               "dates": "Sep 2023 - Jul 2024",
               "tasks": [
-                "Redesigned the mobile ui to improve user flow and reduce friction.",
-                "Created a new design system for product details to enhance clarity and comprehension.",
-                "Optimized the checkout experience to minimize user effort and maximize conversions."
+                "Updated the system design for the SIALAM mobile application.",
+                "Implemented design changes to the product details section of the SIALAM mobile app to enhance usability.",
+                "Refined several UI elements to improve user-friendliness."
               ]
             }
           }
@@ -42,8 +44,8 @@
         "omhut": {
           "title": "Omhut Self Service Web App",
           "description": [
-            "Aplikasi web ini dirancang untuk menyederhanakan dan mempercepat proses pemesanan di kedai kopi Omhut Parkopi. Dengan antarmuka yang intuitif dan ramah pengguna, pelanggan dapat dengan mudah memilih menu dan melacak status pesanan mereka. Di sisi lain, staf kedai kopi dapat memproses pesanan dengan efisien dan mengelola menu melalui dashboard yang terintegrasi. Aplikasi ini dibangun menggunakan framework CodeIgniter 3 dan menggunakan MySQL sebagai basis datanya.",
-            "Sebagai mahasiswa Sistem Informasi di Universitas Esa Unggul, saya mengembangkan aplikasi pemesanan kopi Omhut Parkopi sebagai bagian dari proyek akhir saya. Proyek ini memungkinkan saya menerapkan pengetahuan yang saya peroleh dalam pengembangan web. Selain itu, proyek ini memberikan kesempatan untuk menyelesaikan masalah nyata yang dihadapi oleh bisnis kecil. Anda dapat mencoba aplikasi ini dengan mengunduh proyeknya dari GitHub saya di "
+            "This web application is designed to simplify and speed up the ordering process at Omhut Parkopi coffee shop. With an intuitive and user-friendly interface, customers can easily select menu items and track the status of their orders. On the other hand, the coffee shop staff can efficiently process orders and manage the menu through an integrated dashboard. The application is built using the CodeIgniter 3 framework and uses MySQL as its database.",
+            "As an Information Systems student at Esa Unggul University, I developed the Omhut Parkopi coffee ordering web application as part of my final project. This project allowed me to apply the knowledge I've gained in web development. Additionally, it provided an opportunity to solve real-world problems faced by small businesses. You can try out the application by downloading the project from my GitHub at "
           ]
         },
         "preview": "Project Preview"
@@ -52,13 +54,13 @@
     "about": {
       "heading": "About Me",
       "content": [
-        "I am a UI/UX Designer with 2 years of experience in designing intuitive and engaging user interfaces and user experiences. Throughout my career, I have worked on various projects involving web and mobile application design, where I was responsible for creating designs that are both flexible and functional.",
-        "I am a UI/UX Designer with 2 years of experience in designing intuitive and engaging user interfaces and user experiences. Throughout my career, I have worked on various projects involving web and mobile application design, where I was responsible for creating designs that are both flexible and functional."
+        "Hi, I'm Santosa. As a UI/UX Designer with 2 years of experience, I specialize in creating intuitive and engaging user interfaces for web and mobile applications. Passionate about crafting artistic, modern, and informative designs, I aim to ensure that each project is both flexible and functional. My approach always aligns with business goals to enhance user satisfaction and deliver impactful results.",
+        "With a strong foundation in web development—PHP, HTML, CSS, JavaScript, and SQL—I collaborate effectively with development teams to seamlessly bring designs to life. Proficient in Figma and Inkscape, I focus on producing visually appealing and high-quality solutions that meet user needs and business objectives. Outside of work, I enjoy exploring books and films that contain valuable life lessons."
       ]
     },
     "contact": {
       "heading": "Contact Me",
-      "content": "Contact me on one of the platforms listed below."
+      "content": "Click one of the icons below to contact me."
     },
     "footer": {
       "location": {
@@ -91,25 +93,27 @@
             "period1": {
               "dates": "Sep 2022 - May 2023",
               "tasks": [
-                "Melakukan penelitian untuk menginformasikan desain sistem bisnis.",
-                "Riwayat Pekerjaan di PT Bhineka Alam Nusantara pada SIALAM Produk sebagai Desainer UI/UX",
-                "Mengembangkan prototipe yang memfasilitasi interaksi pengguna."
+                "Berkolaborasi dengan Product Manager dan Business Analyst untuk menentukan desain sistem.",
+                "Menentukan design pattern aplikasi mobile SIALAM.",
+                "Mendesain antarmuka (UI) untuk aplikasi mobile SIALAM.",
+                "Membuat prototipe aplikasi mobile SIALAM."
               ]
             },
             "period2": {
               "dates": "Mei 2023 - Jul 2023",
               "tasks": [
-                "Membuat Sistem Desain atau pola desain untuk antarmuka pengguna mobile.",
-                "Merancang antarmuka pengguna yang menarik secara visual dan fungsional untuk halaman muka website.",
-                "Mengembangkan prototipe yang memfasilitasi interaksi pengguna."
+                "Mendesain antarmuka (UI) untuk web landing page SIALAM.",
+                "Membuat prototipe untuk web landing page SIALAM.",
+                "Membuat application flow design yang mudah dipahami oleh tim developer.",
+                "Melakukan design review pada aplikasi mobile SIALAM."
               ]
             },
             "period3": {
               "dates": "Sep 2023 - Jul 2024",
               "tasks": [
-                "Mendesain ulang antarmuka pengguna mobile untuk meningkatkan alur pengguna dan mengurangi hambatan.",
-                "Membuat sistem desain baru untuk detail produk guna meningkatkan kejelasan dan pemahaman.",
-                "Mengoptimalkan pengalaman checkout untuk meminimalkan usaha pengguna dan memaksimalkan konversi."
+                "Memperbarui desain sistem untuk aplikasi mobile SIALAM.",
+                "Melakukan perubahan pada detail produk di aplikasi mobile SIALAM agar lebih mudah digunakan.",
+                "Memperbarui beberapa tampilan aplikasi untuk meningkatkan user-friendliness."
               ]
             }
           }
@@ -117,8 +121,8 @@
         "omhut": {
           "title": "Aplikasi Web Layanan Mandiri Omhut",
           "description": [
-            "This web application is designed to simplify and speed up the ordering process at Omhut Parkopi coffee shop. With an intuitive and user-friendly interface, customers can easily select menu items and track the status of their orders. On the other hand, the coffee shop staff can efficiently process orders and manage the menu through an integrated dashboard. The application is built using the CodeIgniter 3 framework and uses MySQL as its database.",
-            "As an Information Systems student at Esa Unggul University, I developed the Omhut Parkopi coffee ordering web application as part of my final project. This project allowed me to apply the knowledge I've gained in web development. Additionally, it provided an opportunity to solve real-world problems faced by small businesses. You can try out the application by downloading the project from my GitHub at "
+            "Aplikasi web ini dirancang untuk menyederhanakan dan mempercepat proses pemesanan di kedai kopi Omhut Parkopi. Dengan antarmuka yang intuitif dan ramah pengguna, pelanggan dapat dengan mudah memilih menu dan melacak status pesanan mereka. Di sisi lain, staf kedai kopi dapat memproses pesanan dengan efisien dan mengelola menu melalui dashboard yang terintegrasi. Aplikasi ini dibangun menggunakan framework CodeIgniter 3 dan menggunakan MySQL sebagai basis datanya.",
+            "Sebagai mahasiswa Sistem Informasi di Universitas Esa Unggul, saya mengembangkan aplikasi pemesanan kopi Omhut Parkopi sebagai bagian dari proyek akhir saya. Proyek ini memungkinkan saya menerapkan pengetahuan yang saya peroleh dalam pengembangan web. Selain itu, proyek ini memberikan kesempatan untuk menyelesaikan masalah nyata yang dihadapi oleh bisnis kecil. Anda dapat mencoba aplikasi ini dengan mengunduh proyeknya dari GitHub saya di "
           ]
         },
         "preview": "Pratinjau Proyek"
@@ -127,13 +131,13 @@
     "about": {
       "heading": "Tentang Saya",
       "content": [
-        "Saya seorang Desainer UI/UX dengan pengalaman 2 tahun dalam mendesain antarmuka pengguna dan pengalaman pengguna yang intuitif dan menarik. Sepanjang karier saya, saya telah mengerjakan berbagai proyek yang melibatkan desain aplikasi web dan seluler, di mana saya bertanggung jawab untuk menciptakan desain yang fleksibel dan fungsional.",
-        "Saya seorang Desainer UI/UX dengan pengalaman 2 tahun dalam mendesain antarmuka pengguna dan pengalaman pengguna yang intuitif dan menarik. Sepanjang karier saya, saya telah mengerjakan berbagai proyek yang melibatkan desain aplikasi web dan seluler, di mana saya bertanggung jawab untuk menciptakan desain yang fleksibel dan fungsional."
+        "Hai, saya Ndaru. Sebagai seorang UI/UX Designer dengan pengalaman 2 tahun, saya fokus menciptakan antarmuka pengguna yang intuitif dan menarik untuk aplikasi web dan mobile. Saya punya passion besar dalam membuat desain yang artistik, modern, dan informatif, sambil memastikan setiap proyek fleksibel dan fungsional. Pendekatan saya selalu sejalan dengan tujuan bisnis untuk meningkatkan kepuasan pengguna dan memberikan hasil yang berdampak.",
+        "Dengan dasar yang kuat di pengembangan web—seperti PHP, HTML, CSS, JavaScript, dan SQL—saya bisa bekerja sama dengan tim developer untuk mewujudkan desain dengan mulus. Mahir menggunakan Figma dan Inkscape, saya berfokus menghasilkan solusi berkualitas tinggi dan menarik secara visual yang memenuhi kebutuhan pengguna dan target bisnis. Di luar pekerjaan, saya biasa menonton atau membaca buku yang memiliki pesan dan kesan kehidupan yang bermakna."
       ]
     },
     "contact": {
       "heading": "Kontak Saya",
-      "content": "Hubungi saya melalui salah satu platform yang tercantum di bawah ini."
+      "content": "Klik salah satu icon dibawah ini untuk menghubungi saya."
     },
     "footer": {
       "location": {
