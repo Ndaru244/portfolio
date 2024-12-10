@@ -204,10 +204,23 @@
           <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
           <div class="divider-custom-line"></div>
         </div>
+
+        <!-- Filter Button -->
+         <div class="row justify-content-center">
+          <div class="col text-center">
+            <div class="btn-group mb-4" >
+              <button type="button" id="filterAll" class="btn btn-primary" data-filter="all">All</button>
+              <button type="button" id="filterUiUx" class="btn btn-outline-primary" data-filter="uiux">UI/UX Desgin</button>
+              <button type="button" id="filterWebApp" class="btn btn-outline-primary" data-filter="webapp">Website</button>
+            </div>
+          </div>
+         </div>
+        
         <!-- Portfolio Grid Items-->
-        <div class="row justify-content-center">
+        <div class="row justify-content-center porto-items">
+          
           <!-- Portfolio Item 1-->
-          <div class="col-md-6 col-lg-4 mb-5">
+          <div class="col-md-6 col-lg-4 mb-5 porto-item" data-category="uiux">
             <div
               class="portfolio-item mx-auto"
               data-bs-toggle="modal"
@@ -230,7 +243,7 @@
             </div>
           </div>
           <!-- Portfolio Item 2-->
-          <div class="col-md-6 col-lg-4 mb-5">
+          <div class="col-md-6 col-lg-4 mb-5 porto-item" data-category="webapp">
             <div
               class="portfolio-item mx-auto"
               data-bs-toggle="modal"
@@ -382,7 +395,6 @@
         </div>
       </div>
     </section>
-    \
 
     <!-- Footer-->
     <footer class="footer text-center">
