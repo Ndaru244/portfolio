@@ -12,6 +12,10 @@ const lightbox2 = GLightbox({
   selector: 'a[data-gallery="gallery2"]',
 });
 
+const lightbox3 = GLightbox({
+  selector: 'a[data-gallery="gallery3"]',
+});
+
 // load language JSON
 function loadLanguageData() {
   return fetch("languages.json")
