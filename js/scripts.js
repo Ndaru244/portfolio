@@ -4,7 +4,6 @@
  * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-freelancer/blob/master/LICENSE)
  */
 
-
 const lightbox1 = GLightbox({
   selector: 'a[data-gallery="gallery1"]',
 });
@@ -69,40 +68,39 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Filter Portfolio
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function () {
   const filterButtons = [
-    document.getElementById('filterAll'),
-    document.getElementById('filterUiUx'),
-    document.getElementById('filterWebApp')
+    document.getElementById("filterAll"),
+    document.getElementById("filterUiUx"),
+    document.getElementById("filterWebApp"),
   ];
-  const portfolioItems = document.querySelectorAll('.porto-item');
+  const portfolioItems = document.querySelectorAll(".porto-item");
 
-  filterButtons.forEach(button => {
-    button.addEventListener('click', function() {
-      filterButtons.forEach(btn => {
-        btn.classList.remove('btn-primary');
-        btn.classList.add('btn-outline-primary');
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      filterButtons.forEach((btn) => {
+        btn.classList.remove("btn-primary");
+        btn.classList.add("btn-outline-primary");
       });
 
-      this.classList.remove('btn-outline-primary');
-      this.classList.add('btn-primary');
+      this.classList.remove("btn-outline-primary");
+      this.classList.add("btn-primary");
 
-      const filter = this.getAttribute('data-filter');
-      
-      portfolioItems.forEach(item => {
-        const category = item.getAttribute('data-category');
-        if (filter === 'all' || category === filter) {
-          item.classList.remove('d-none');
+      const filter = this.getAttribute("data-filter");
+
+      portfolioItems.forEach((item) => {
+        const category = item.getAttribute("data-category");
+        if (filter === "all" || category === filter) {
+          item.classList.remove("d-none");
         } else {
-          item.classList.add('d-none');
+          item.classList.add("d-none");
         }
-      })
-    })
-  })
-})
+      });
+    });
+  });
+});
 
 window.addEventListener("DOMContentLoaded", (event) => {
-
   // Navbar shrink function
   var navbarShrink = function () {
     const navbarCollapsible = document.body.querySelector("#mainNav");
