@@ -48,6 +48,13 @@
             "As an Information Systems student at Esa Unggul University, I developed the Omhut Parkopi coffee ordering web application as part of my final project. This project allowed me to apply the knowledge I've gained in web development. Additionally, it provided an opportunity to solve real-world problems faced by small businesses. You can try out the application by downloading the project from my GitHub at "
           ]
         },
+        "crooked": {
+          "title": "Crooked Indonesia - Online Catalog",
+          "description": [
+            "This project is an online catalog designed to support Crooked Indonesia, a local fashion brand focused on selling outfits. The website served as a digital showcase to display the product collection in an informative and attractive manner. <br> The project was contract-based and paid upon completion. I worked as a backend developer while also assisting the frontend team in integrating data from the backend to the frontend. This project was undertaken in 2022 and completed within 6 months.",
+            " However, the website is no longer operational as the Crooked Indonesia business has ceased operations. You can view the source code through the following GitHub link: "
+          ]
+        },
         "preview": "Project Preview"
       }
     },
@@ -123,6 +130,13 @@
           "description": [
             "Aplikasi web ini dirancang untuk menyederhanakan dan mempercepat proses pemesanan di kedai kopi Omhut Parkopi. Dengan antarmuka yang intuitif dan ramah pengguna, pelanggan dapat dengan mudah memilih menu dan melacak status pesanan mereka. Di sisi lain, staf kedai kopi dapat memproses pesanan dengan efisien dan mengelola menu melalui dashboard yang terintegrasi. Aplikasi ini dibangun menggunakan framework CodeIgniter 3 dan menggunakan MySQL sebagai basis datanya.",
             "Sebagai mahasiswa Sistem Informasi di Universitas Esa Unggul, saya mengembangkan aplikasi pemesanan kopi Omhut Parkopi sebagai bagian dari proyek akhir saya. Proyek ini memungkinkan saya menerapkan pengetahuan yang saya peroleh dalam pengembangan web. Selain itu, proyek ini memberikan kesempatan untuk menyelesaikan masalah nyata yang dihadapi oleh bisnis kecil. Anda dapat mencoba aplikasi ini dengan mengunduh proyeknya dari GitHub saya di "
+          ]
+        },
+        "crooked": {
+          "title": "Crooked Indonesia - Katalog Online",
+          "description": [
+            "Proyek ini adalah sebuah katalog online yang dirancang untuk mendukung bisnis Crooked Indonesia, sebuah brand fashion lokal yang fokus pada penjualan outfit. Website ini berfungsi sebagai etalase digital untuk menampilkan koleksi produk secara informatif dan menarik.<br> Proyek ini bersifat kontrak dan dibayar setelah selesai. Saya bekerja sebagai backend developer sekaligus membantu frontend dalam mengintegrasikan data dari backend ke frontend. Proyek ini dikerjakan pada tahun 2022 dan selesai dalam waktu 6 bulan.",
+            " Namun, saat ini website ini sudah berhenti beroperasi karena bisnis Crooked Indonesia telah berhenti beroperasi. Anda dapat melihat kode programnya melalui link GitHub berikut: "
           ]
         },
         "preview": "Pratinjau Proyek"
