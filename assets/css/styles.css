@@ -168,3 +168,56 @@ footer { margin-top: 4rem; border-top: 2px solid var(--terminal-green); padding-
 ::-webkit-scrollbar-thumb:hover { background-color: var(--terminal-green); box-shadow: 0 0 15px var(--terminal-green); cursor: pointer; }
 ::-webkit-scrollbar-corner { background: var(--monitor-bg); border: 1px solid var(--terminal-dim); }
 html { scrollbar-width: auto; scrollbar-color: var(--terminal-dim) var(--monitor-bg); }
+
+/* --- MOBILE RESPONSIVE FIXES (FINAL) --- */
+@media (max-width: 768px) {
+    html { font-size: 14px; }
+    .container { padding: 1rem; }
+    
+    nav {
+        flex-wrap: nowrap;
+        gap: 10px;
+    }
+    
+    .logo { 
+        font-size: 1.5rem;
+        letter-spacing: 1px; 
+        white-space: nowrap;
+    }
+    
+    .btn-back {
+        font-size: 0.8rem !important;
+        padding: 5px 10px !important;
+        white-space: nowrap;
+        border-width: 1px !important;
+    }
+    
+    .btn-back i { font-size: 0.8rem; }
+
+    .intro h1 { 
+        font-size: 2.5rem; 
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        word-wrap: break-word;
+    }
+
+    .process-steps {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+    .step-item::after { content: ""; } 
+    .step-item { 
+        border: 1px solid var(--terminal-dim); 
+        padding: 8px; 
+        border-radius: 4px;
+        background: rgba(0, 255, 0, 0.05);
+    }
+    
+    .skill-container { padding: 1rem; }
+    .skill-box .tags span { font-size: 1.1rem; }
+    .card-img { height: 180px; }
+    .hud-decor-tr, .hud-decor-bl { display: none; }
+    .profile-card-advanced { padding: 1rem; }
+    .project-header div { font-size: 0.9rem !important; }
+}
