@@ -76,5 +76,5 @@ Selamat datang di repositori data saya. Saya adalah seorang **UI/UX Designer** y
 ---
 
 <div align="center">
-  <p><code>ROBCO INDUSTRIES (TM) TERM-LINK PROTOCOL // &copy; 2025 Ndaru L Santosa</code></p>
+  <p><code>NLS SYSTEMS (TM) SECURE PROTOCOL // &copy; 2025 Ndaru L Santosa</code></p>
 </div>
