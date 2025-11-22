@@ -1,25 +1,25 @@
-/* assets/css/styles.css - FALLOUT TERMINAL THEME (DEFAULT) */
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 :root {
-    /* --- VARIABEL WARNA (KUNCI UTAMA) --- */
-    /* Variabel ini akan di-override di styles-2.css */
-    --monitor-bg: #000000;       /* Hitam Pekat */
-    --terminal-green: #33ff00;   /* Hijau Neon (Utama) */
-    --terminal-dim: #1a8000;     /* Hijau Gelap (Sekunder) */
-    --terminal-alert: #ffb000;   /* Kuning/Amber (Highlight) */
+    --monitor-bg: #000000;
+    --terminal-green: #33ff00;
+    --terminal-dim: #1a8000;
+    --terminal-alert: #ffb000;
     
-    /* Variabel Tambahan */
     --terminal-glow: rgba(51, 255, 0, 0.5);
     --terminal-alert-glow: rgba(255, 176, 0, 0.5);
     --card-bg: rgba(0, 20, 0, 0.3);
-    --card-border: #33ff00;      /* Sama dengan terminal green */
+    --card-border: #33ff00;
     
     --font-primary: 'VT323', monospace;
-    --text-body: #33ff00;        /* Sama dengan terminal green */
+    --text-body: #33ff00;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; cursor: default; }
+
+html, body {
+    width: 100%; overflow-x: hidden; margin: 0; padding: 0;
+}
 
 body {
     background-color: var(--monitor-bg);
@@ -39,12 +39,17 @@ body::before {
     animation: scanline-scroll 10s linear infinite;
 }
 
+body.loaded .container {
+    opacity: 1;
+    animation: none;
+    transition: opacity 0.5s ease;
+}
+
 /* Container Utama */
 .container {
     max-width: 1200px; margin: 0 auto; padding: 2rem; 
     position: relative; z-index: 10;
     opacity: 0;
-    /* Animasi muncul setelah loader selesai (Delay 2.3s) */
     animation: contentFadeIn 1s ease-out 2.3s forwards;
 }
 
@@ -224,16 +229,14 @@ html { scrollbar-width: auto; scrollbar-color: var(--terminal-dim) var(--monitor
     padding: 4px 10px;
     font-size: 0.9rem;
     font-weight: bold;
-    
-    /* Trik Posisi: Geser ke kiri (negatif) tapi tetap dorong konten bawahnya */
     position: relative; 
-    margin-left: -2.8rem; /* Geser agar menempel di garis */
-    margin-bottom: 0.8rem; /* Beri jarak ke judul di bawahnya */
+    margin-left: -2.8rem;
+    margin-bottom: 0.8rem;
 }
 
 /* 4. Judul Fase */
 .timeline-title {
-    color: var(--terminal-alert); /* Warna Kuning/Oranye */
+    color: var(--terminal-alert);
     margin-top: 0;
     margin-bottom: 1rem;
     font-size: 1.2rem;
@@ -257,7 +260,6 @@ html { scrollbar-width: auto; scrollbar-color: var(--terminal-dim) var(--monitor
     .btn-back i { font-size: 0.8rem; }
     .intro h1 { font-size: 2.5rem; line-height: 1.2; margin-bottom: 1rem; word-wrap: break-word; }
     
-    /* Project Header Fix (Override untuk detail proyek) */
     .project-header h1 { 
         font-size: 1.8rem !important; 
         line-height: 1.2 !important; 
@@ -288,7 +290,7 @@ html { scrollbar-width: auto; scrollbar-color: var(--terminal-dim) var(--monitor
         padding-left: 1.5rem;
     }
     .timeline-date {
-        margin-left: -2rem; /* Sesuaikan geseran di HP */
+        margin-left: -2rem;
         font-size: 0.8rem;
     }
 }

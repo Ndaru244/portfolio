@@ -1,44 +1,42 @@
-window.addEventListener("load", function () {
-  const loader = document.getElementById("loader");
-  setTimeout(() => {
-    loader.style.display = "none";
-  }, 2200);
-});
-
 /* assets/js/scripts.js */
-document.addEventListener("DOMContentLoaded", function() {
+
+window.addEventListener("load", function () {
+    // 1. Setup Loader
+    const loader = document.getElementById("loader");
+    if (loader) {
+        setTimeout(() => {
+            loader.style.display = "none";
+            // TANDAI BAHWA LOADING SELESAI
+            document.body.classList.add('loaded');
+        }, 2200);
+    } else {
+        // Jika tidak ada loader (jaga-jaga), langsung tandai loaded
+        document.body.classList.add('loaded');
+    }
+
+    // 2. Cek Tema Tersimpan
     const savedTheme = localStorage.getItem('portfolio-theme');
     const themeLink = document.getElementById('theme-style');
-    
-    // Jika ada tema tersimpan dan elemen link ditemukan
+
     if (savedTheme && themeLink) {
         themeLink.href = savedTheme;
     }
 });
 
-// 2. Fungsi Ganti Theme (Dipanggil saat tombol diklik)
+// 3. Fungsi Ganti Tema
 function toggleTheme() {
     const themeLink = document.getElementById('theme-style');
-    
-    if (!themeLink) {
-        console.error("Error: Element dengan id 'theme-style' tidak ditemukan di HTML.");
-        return;
-    }
+    if (!themeLink) return;
 
     const currentTheme = themeLink.getAttribute('href');
     let newTheme = '';
 
-    // Logika penukaran (Pastikan path file CSS sesuai folder Anda)
-    // Asumsi: Default adalah 'style-fallout.css', Alternatif 'style-new.css'
     if (currentTheme.includes('styles.css')) {
-        newTheme = 'assets/css/styles-2.css'; // Ganti ke tema Sci-Fi/Baru
+        newTheme = 'assets/css/styles-2.css';
     } else {
-        newTheme = 'assets/css/styles.css'; // Balik ke tema Fallout
+        newTheme = 'assets/css/styles.css';
     }
 
-    // Terapkan & Simpan
     themeLink.href = newTheme;
     localStorage.setItem('portfolio-theme', newTheme);
-    
-    console.log("Theme Switched to: " + newTheme);
 }

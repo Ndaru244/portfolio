@@ -1,22 +1,11 @@
-/* assets/css/styles-2.css - INSTITUTE THEME (ALTERNATE) */
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@300;400;600&display=swap');
 
 :root {
-    /* --- MAPPING VARIABEL (AGAR SINKRON DENGAN STYLE FALLOUT) --- */
-    
-    /* Latar Belakang */
-    --monitor-bg: #f8fafc;       /* Putih Bersih */
-    
-    /* Warna Utama (Pengganti Hijau Terminal -> Biru Langit) */
+    --monitor-bg: #f8fafc;
     --terminal-green: #0ea5e9;   
-    
-    /* Warna Sekunder (Pengganti Hijau Gelap -> Abu-abu) */
     --terminal-dim: #64748b;     
-    
-    /* Warna Highlight (Pengganti Kuning -> Oranye) */
     --terminal-alert: #f59e0b;   
     
-    /* Variabel Tambahan */
     --terminal-glow: rgba(14, 165, 233, 0.3);
     --terminal-alert-glow: rgba(245, 158, 11, 0.3);
     --card-bg: #ffffff;
@@ -25,10 +14,14 @@
     --font-primary: 'Rajdhani', sans-serif;
     --font-body: 'Inter', sans-serif;
     
-    --text-body: #334155; /* Teks gelap untuk latar putih */
+    --text-body: #334155;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+    overflow-x: hidden; width: 100%; 
+}
 
 body {
     background-color: var(--monitor-bg);
@@ -38,17 +31,24 @@ body {
     background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
     background-size: 30px 30px;
     padding-bottom: 5rem;
+    margin: 0;
+    width: 100%;
 }
 
 /* Matikan Efek CRT Fallout */
 body::before { display: none; }
+
+body.loaded .container {
+    opacity: 1;
+    animation: none;
+    transition: opacity 0.5s ease;
+}
 
 /* --- UTILITIES --- */
 .container { 
     max-width: 1200px; margin: 0 auto; padding: 2rem; 
     position: relative; z-index: 10;
     opacity: 0;
-    /* Delay 2.3s agar konten muncul SETELAH loader selesai */
     animation: contentFadeIn 1s ease-out 2.3s forwards; 
 }
 
@@ -177,7 +177,6 @@ a.card:hover .card-img { opacity: 1; transform: scale(1.05); filter: none; }
     height: 100%; width: 0;
     background: linear-gradient(90deg, var(--terminal-green), #38bdf8);
     box-shadow: none; border-radius: 10px;
-    /* Animasi dengan Delay 2.5s agar sinkron dengan loading page */
     animation: fillBar 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
     animation-delay: 2.5s; 
 }
@@ -237,14 +236,14 @@ a.card:hover .card-img { opacity: 1; transform: scale(1.05); filter: none; }
 footer { margin-top: 4rem; border-top: 1px solid var(--card-border); padding-top: 3rem; text-align: center; color: var(--text-muted); }
 ::-webkit-scrollbar { width: 10px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; border: 3px solid transparent; background-clip: content-box; }
+::-webkit-scrollbar-thumb { background: var(--terminal-green); border-radius: 10px; border: 3px solid transparent; background-clip: content-box; }
 ::-webkit-scrollbar-thumb:hover { background-color: var(--terminal-green); }
 
-/* --- TIMELINE FIX (Add to Bottom) --- */
+/* --- TIMELINE --- */
 
 /* 1. Container Garis Kiri */
 .timeline-section {
-    border-left: 2px solid var(--terminal-green); /* Garis Vertikal */
+    border-left: 2px solid var(--terminal-green);
     margin-left: 1rem;
     padding-left: 2rem;
     position: relative;
@@ -256,7 +255,7 @@ footer { margin-top: 4rem; border-top: 1px solid var(--card-border); padding-top
     position: relative;
 }
 
-/* 3. Label Tanggal (FIXED) */
+/* 3. Label Tanggal */
 .timeline-date {
     display: inline-block;
     background-color: var(--monitor-bg);
@@ -265,16 +264,14 @@ footer { margin-top: 4rem; border-top: 1px solid var(--card-border); padding-top
     padding: 4px 10px;
     font-size: 0.9rem;
     font-weight: bold;
-    
-    /* Trik Posisi: Geser ke kiri (negatif) tapi tetap dorong konten bawahnya */
     position: relative; 
-    margin-left: -2.8rem; /* Geser agar menempel di garis */
-    margin-bottom: 0.8rem; /* Beri jarak ke judul di bawahnya */
+    margin-left: -2.8rem;
+    margin-bottom: 0.8rem;
 }
 
 /* 4. Judul Fase */
 .timeline-title {
-    color: var(--terminal-alert); /* Warna Kuning/Oranye */
+    color: var(--terminal-alert);
     margin-top: 0;
     margin-bottom: 1rem;
     font-size: 1.2rem;
@@ -287,11 +284,11 @@ footer { margin-top: 4rem; border-top: 1px solid var(--card-border); padding-top
 @keyframes contentFadeIn { to { opacity: 1; } }
 @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 
-/* --- MOBILE RESPONSIVE (SAMAKAN LOGIKA DENGAN FALLOUT) --- */
+/* --- MOBILE RESPONSIVE --- */
 @media (max-width: 768px) {
     html { font-size: 14px; }
     .container { padding: 1rem; }
-    nav { flex-wrap: nowrap; gap: 10px; padding: 1rem; }
+    nav { flex-wrap: nowrap; gap: 10px; padding: 1rem 1rem; margin-left: -1rem; margin-right: -1rem; width: calc(100% + 2rem); gap: 10px; flex-wrap: nowrap; }
     .logo { font-size: 1.5rem; letter-spacing: 1px; white-space: nowrap; }
     .btn-back { 
         font-size: 0.8rem !important; padding: 5px 10px !important; 
@@ -301,7 +298,6 @@ footer { margin-top: 4rem; border-top: 1px solid var(--card-border); padding-top
     .btn-back i { font-size: 0.8rem; }
     .intro h1 { font-size: 2.5rem; line-height: 1.2; margin-bottom: 1rem; word-wrap: break-word; }
     
-    /* Header Detail Proyek - Responsive */
     .project-header h1 { 
         font-size: 1.8rem !important; line-height: 1.2 !important; 
         margin-bottom: 1rem !important; word-wrap: break-word; 
@@ -327,7 +323,7 @@ footer { margin-top: 4rem; border-top: 1px solid var(--card-border); padding-top
         padding-left: 1.5rem;
     }
     .timeline-date {
-        margin-left: -2rem; /* Sesuaikan geseran di HP */
+        margin-left: -2rem;
         font-size: 0.8rem;
     }
 }
