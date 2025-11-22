@@ -1,21 +1,22 @@
-/* assets/css/style-fallout.css - FALLOUT TERMINAL THEME */
+/* assets/css/styles.css - FALLOUT TERMINAL THEME (DEFAULT) */
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 :root {
-    /* --- DEFINISI VARIABEL (KUNCI UTAMA) --- */
-    /* Nama variabel ini HARUS SAMA di style-new.css */
-    
-    --monitor-bg: #000000;       /* Background Utama */
-    --terminal-green: #33ff00;   /* Warna Utama (Teks/Border) */
-    --terminal-dim: #1a8000;     /* Warna Sekunder/Redup */
-    --terminal-alert: #ffb000;   /* Warna Highlight/Peringatan */
+    /* --- VARIABEL WARNA (KUNCI UTAMA) --- */
+    /* Variabel ini akan di-override di styles-2.css */
+    --monitor-bg: #000000;       /* Hitam Pekat */
+    --terminal-green: #33ff00;   /* Hijau Neon (Utama) */
+    --terminal-dim: #1a8000;     /* Hijau Gelap (Sekunder) */
+    --terminal-alert: #ffb000;   /* Kuning/Amber (Highlight) */
     
     /* Variabel Tambahan */
     --terminal-glow: rgba(51, 255, 0, 0.5);
     --terminal-alert-glow: rgba(255, 176, 0, 0.5);
     --card-bg: rgba(0, 20, 0, 0.3);
+    --card-border: #33ff00;      /* Sama dengan terminal green */
     
     --font-primary: 'VT323', monospace;
+    --text-body: #33ff00;        /* Sama dengan terminal green */
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; cursor: default; }
@@ -29,7 +30,7 @@ body {
     padding-bottom: 5rem;
 }
 
-/* CRT Effect */
+/* Efek Layar CRT (Scanline) */
 body::before {
     content: " "; display: block; position: fixed; top: 0; left: 0; bottom: 0; right: 0;
     background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
@@ -38,39 +39,59 @@ body::before {
     animation: scanline-scroll 10s linear infinite;
 }
 
-/* Utilities */
-.container { max-width: 1200px; margin: 0 auto; padding: 2rem; position: relative; z-index: 10; opacity: 0; animation: contentFadeIn 1s ease-out 2.3s forwards; }
+/* Container Utama */
+.container {
+    max-width: 1200px; margin: 0 auto; padding: 2rem; 
+    position: relative; z-index: 10;
+    opacity: 0;
+    /* Animasi muncul setelah loader selesai (Delay 2.3s) */
+    animation: contentFadeIn 1s ease-out 2.3s forwards;
+}
+
 a { text-decoration: none; color: var(--terminal-green); cursor: pointer; transition: 0.3s; }
 .blink { animation: blink 1s infinite; }
 
-/* Loading */
-#loader { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: var(--monitor-bg); z-index: 9999; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+/* --- LOADING SCREEN --- */
+#loader {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background-color: var(--monitor-bg); z-index: 9999;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+}
 .loading-bar { width: 300px; height: 20px; border: 2px solid var(--terminal-green); padding: 2px; }
 .loading-progress { width: 0%; height: 100%; background-color: var(--terminal-green); animation: loadOS 2s steps(10) forwards; }
 
-/* Header */
-nav { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--terminal-green); padding-bottom: 1rem; margin-bottom: 3rem; }
+/* --- NAVBAR --- */
+nav {
+    display: flex; justify-content: space-between; align-items: center;
+    border-bottom: 2px solid var(--terminal-green);
+    padding-bottom: 1rem; margin-bottom: 3rem;
+}
 .logo { font-size: 2.5rem; letter-spacing: 5px; text-transform: uppercase; }
 .nav-icons a { font-size: 1.5rem; margin-left: 1rem; }
 .nav-icons a:hover { color: var(--terminal-alert); text-shadow: 0 0 10px var(--terminal-alert); }
 
-/* Intro & Avatar */
+/* --- INTRO & AVATAR --- */
 .intro { display: flex; flex-direction: column; align-items: center; text-align: center; margin-bottom: 4rem; }
 .intro h1 { font-size: 4rem; text-transform: uppercase; margin-bottom: 0.5rem; font-weight: normal; }
 .status-text { background: var(--terminal-green); color: #000; padding: 0 10px; font-size: 1.2rem; display: inline-block; }
 .text-highlight-ux { color: var(--terminal-alert); font-weight: bold; text-shadow: 0 0 8px var(--terminal-alert-glow); font-size: 1.4rem; }
 
+/* Avatar TV Style */
 .avatar {
     width: 140px; height: 140px; border-radius: 30px; border: 3px solid var(--terminal-green);
-    margin-bottom: 1rem; object-fit: cover; filter: sepia(100%) hue-rotate(80deg) saturate(120%) brightness(0.9);
+    margin-bottom: 1rem; object-fit: cover;
+    filter: sepia(100%) hue-rotate(80deg) saturate(120%) brightness(0.9);
     -webkit-mask-image: linear-gradient(to bottom, black 40%, rgba(0,0,0,0.2) 50%, black 60%);
     mask-image: linear-gradient(to bottom, black 40%, rgba(0,0,0,0.2) 50%, black 60%);
     -webkit-mask-size: 100% 200%; mask-size: 100% 200%; animation: tvScan 3s linear infinite;
 }
 .avatar:hover { filter: none; box-shadow: 0 0 20px var(--terminal-green); -webkit-mask-image: none; mask-image: none; animation: none; }
 
-/* Skills */
-.skill-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; width: 100%; border: 1px solid var(--terminal-green); padding: 1.5rem; margin-top: 2rem; position: relative; }
+/* --- SKILLS & UX --- */
+.skill-container {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;
+    width: 100%; border: 1px solid var(--terminal-green); padding: 1.5rem; margin-top: 2rem; position: relative;
+}
 .skill-container::before { content: "[ SKILL_MATRIX ]"; position: absolute; top: -14px; left: 20px; background: var(--monitor-bg); padding: 0 10px; }
 .skill-box h4 { border-bottom: 1px dashed var(--terminal-dim); margin-bottom: 0.5rem; }
 .skill-box .tags span { display: block; font-size: 1.2rem; }
@@ -78,7 +99,6 @@ nav { display: flex; justify-content: space-between; align-items: center; border
 .design-focus { border-color: var(--terminal-alert); background: rgba(255, 176, 0, 0.05); }
 .design-focus h4 { color: var(--terminal-alert); border-bottom-color: var(--terminal-alert); }
 
-/* UX Process */
 .ux-process-container { margin: 2rem 0; width: 100%; max-width: 600px; border: 1px dashed var(--terminal-alert); padding: 1rem; position: relative; }
 .ux-process-container::before { content: "[ UX_WORKFLOW ]"; position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--monitor-bg); padding: 0 10px; color: var(--terminal-alert); }
 .process-steps { display: flex; justify-content: space-between; text-align: center; font-size: 1rem; color: var(--terminal-alert); }
@@ -86,25 +106,29 @@ nav { display: flex; justify-content: space-between; align-items: center; border
 .step-item::after { content: ">>"; position: absolute; right: -10px; top: 0; color: var(--terminal-dim); }
 .step-item:last-child::after { content: ""; }
 
-/* Layout */
+/* --- LAYOUT GRID --- */
 .main-layout { display: flex; flex-direction: column-reverse; gap: 2rem; }
 @media (min-width: 900px) { .main-layout { display: grid; grid-template-columns: 2fr 1fr; align-items: start; } }
 .project-grid { display: grid; gap: 2rem; }
 .info-sidebar { display: flex; flex-direction: column; gap: 2rem; }
 
-/* Cards */
-.card { border: 2px solid var(--terminal-green); background: var(--card-bg); position: relative; display: flex; flex-direction: column; overflow: hidden; transition: 0.2s; }
+/* --- CARDS (Project) --- */
+.card {
+    border: 2px solid var(--terminal-green); background: var(--card-bg);
+    position: relative; display: flex; flex-direction: column; overflow: hidden; transition: 0.2s;
+}
 .card::after { content: ""; position: absolute; bottom: 5px; right: 5px; width: 20px; height: 20px; border-bottom: 3px solid var(--terminal-green); border-right: 3px solid var(--terminal-green); }
 .card-img { width: 100%; height: 250px; object-fit: cover; filter: grayscale(100%) sepia(100%) hue-rotate(90deg) saturate(300%); opacity: 0.7; transition: 0.3s; }
 .card-content { padding: 1.5rem; background: linear-gradient(to top, #000 90%, transparent); border-top: 1px solid var(--terminal-green); margin-top: -50px; position: relative; z-index: 2; }
 .card h3 { font-size: 2rem; text-transform: uppercase; margin-bottom: 0.5rem; transition: 0.3s; }
 .card p { font-size: 1.1rem; color: var(--terminal-green); }
+
 a.card:hover { border-color: var(--terminal-green); box-shadow: 0 0 15px var(--terminal-glow); transform: translateY(-5px); }
 a.card:hover h3 { text-shadow: 0 0 10px var(--terminal-green); letter-spacing: 2px; }
 a.card:hover .card-img { opacity: 0.1; filter: blur(3px); }
-.project-hero-img, .project-img { filter: none !important; opacity: 1 !important; box-shadow: none; }
+.project-hero-img, .project-img, .content-block img { filter: none !important; opacity: 1 !important; box-shadow: none; }
 
-/* Profile Stats */
+/* --- PROFILE STATS (Sidebar) --- */
 .profile-card-advanced {
     background: linear-gradient(rgba(0, 255, 0, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 255, 0, 0.05) 1px, transparent 1px), rgba(0, 15, 0, 0.6);
     background-size: 20px 20px; border: 2px solid var(--terminal-green); position: relative; padding: 1.5rem; box-shadow: inset 0 0 30px rgba(0, 255, 0, 0.05); overflow: hidden;
@@ -113,17 +137,36 @@ a.card:hover .card-img { opacity: 0.1; filter: blur(3px); }
 .profile-card-advanced::after { content: "+"; position: absolute; bottom: 5px; right: 5px; color: var(--terminal-dim); font-size: 1.5rem; }
 .hud-decor-tr { position: absolute; top: 5px; right: 5px; color: var(--terminal-dim); font-size: 1.5rem; }
 .hud-decor-bl { position: absolute; bottom: 5px; left: 5px; color: var(--terminal-dim); font-size: 1.5rem; }
+
 .profile-header { border: 1px solid var(--terminal-green); background: rgba(0, 255, 0, 0.1); padding: 5px; margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center; }
 .profile-id { font-size: 0.7rem; color: var(--terminal-dim); letter-spacing: 1px; }
 .char-attributes { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 1.5rem; font-size: 0.9rem; border-bottom: 1px dashed var(--terminal-dim); padding-bottom: 1rem; }
 .attr-val { font-size: 1.2rem; font-weight: bold; color: #fff; text-shadow: 0 0 2px var(--terminal-green); }
+
 .stat-item { margin-bottom: 1rem; }
 .stat-label { display: flex; justify-content: space-between; margin-bottom: 4px; font-size: 0.9rem; }
 .segment-track { width: 100%; height: 18px; background: rgba(0, 0, 0, 0.5); border: 1px solid var(--terminal-dim); padding: 2px; position: relative; }
-.segment-fill { height: 100%; width: 0; background-color: var(--terminal-green); background-image: linear-gradient(90deg, transparent 50%, rgba(0,0,0,0.8) 50%); background-size: 10px 100%; box-shadow: 0 0 10px var(--terminal-glow); animation: fillBar 1.5s steps(20) forwards; }
-.bar-ux .segment-fill { background-color: var(--terminal-alert); box-shadow: 0 0 10px var(--terminal-alert-glow); }
-.system-msg { font-family: 'Courier New', monospace; font-size: 0.85rem; color: var(--terminal-dim); margin-top: 1.5rem; margin-bottom: 1.5rem; line-height: 1.8; border-left: 2px solid var(--terminal-dim); padding-left: 1rem; }
+.segment-fill {
+    height: 100%; width: 0; background-color: var(--terminal-green);
+    background-image: linear-gradient(90deg, transparent 50%, rgba(0,0,0,0.8) 50%); background-size: 10px 100%;
+    box-shadow: 0 0 10px var(--terminal-glow); animation: fillBar 1.5s steps(20) forwards;
+}
+.segment-fill.bar-ux { background-color: var(--terminal-alert); box-shadow: 0 0 10px var(--terminal-alert-glow); }
+
+.system-msg {
+    font-family: 'Courier New', monospace; font-size: 0.85rem; color: var(--terminal-dim);
+    margin-top: 1.5rem; margin-bottom: 1.5rem; line-height: 1.8;
+    border-left: 2px solid var(--terminal-dim); padding-left: 1rem;
+}
 .highlight-msg { color: var(--terminal-alert); }
+
+.btn-retro {
+    display: block; width: 100%; padding: 10px; margin-top: 1rem;
+    border: 2px solid var(--terminal-green); background: transparent;
+    color: var(--terminal-green); text-align: center; font-weight: bold;
+    font-size: 1.1rem; transition: 0.3s;
+}
+.btn-retro:hover { background: var(--terminal-green); color: #000; box-shadow: 0 0 15px var(--terminal-green); }
 
 /* Perks */
 .perk-list { display: flex; flex-direction: column; gap: 1rem; }
@@ -135,21 +178,66 @@ a.card:hover .card-img { opacity: 0.1; filter: blur(3px); }
 .perk-stars { font-size: 0.8rem; color: var(--terminal-alert); margin-bottom: 3px; letter-spacing: 2px; }
 .perk-desc { font-size: 0.85rem; color: #ccffcc; line-height: 1.2; margin: 0 !important; }
 
-/* UI Elements */
-.btn-retro { display: block; width: 100%; padding: 10px; margin-top: 1rem; border: 2px solid var(--terminal-green); background: transparent; color: var(--terminal-green); text-align: center; font-weight: bold; font-size: 1.1rem; transition: 0.3s; }
-.btn-retro:hover { background: var(--terminal-green); color: #000; box-shadow: 0 0 15px var(--terminal-green); }
+/* Footer & Scrollbar */
 footer { margin-top: 4rem; border-top: 2px solid var(--terminal-green); padding-top: 2rem; text-align: center; }
-.fab-btn { position: fixed; bottom: 2rem; right: 2rem; width: 50px; height: 50px; z-index: 1000; background-color: var(--monitor-bg); color: var(--terminal-green); border: 2px solid var(--terminal-green); border-radius: 8px; font-size: 1.5rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: 0.3s; box-shadow: 4px 4px 0px var(--terminal-dim); }
-.fab-btn:hover { background-color: var(--terminal-green); color: var(--monitor-bg); box-shadow: 0 0 15px var(--terminal-green); transform: translate(2px, 2px); }
-.fab-btn:active i { transform: rotate(180deg); transition: 0.2s; }
-
-/* Scrollbar */
 ::-webkit-scrollbar { width: 14px; height: 14px; background-color: var(--monitor-bg); }
 ::-webkit-scrollbar-track { background: #050505; border-left: 1px solid var(--terminal-dim); box-shadow: inset 0 0 10px rgba(0,0,0,0.9); }
 ::-webkit-scrollbar-thumb { background-color: var(--terminal-dim); border: 2px solid var(--monitor-bg); border-radius: 0; }
 ::-webkit-scrollbar-thumb:hover { background-color: var(--terminal-green); box-shadow: 0 0 15px var(--terminal-green); cursor: pointer; }
 ::-webkit-scrollbar-corner { background: var(--monitor-bg); border: 1px solid var(--terminal-dim); }
 html { scrollbar-width: auto; scrollbar-color: var(--terminal-dim) var(--monitor-bg); }
+
+/* FAB */
+.fab-btn { position: fixed; bottom: 2rem; right: 2rem; width: 50px; height: 50px; z-index: 1000; background-color: var(--monitor-bg); color: var(--terminal-green); border: 2px solid var(--terminal-green); border-radius: 8px; font-size: 1.5rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: 0.3s; box-shadow: 4px 4px 0px var(--terminal-dim); }
+.fab-btn:hover { background-color: var(--terminal-green); color: var(--monitor-bg); box-shadow: 0 0 15px var(--terminal-green); transform: translate(2px, 2px); }
+.fab-btn:active i { transform: rotate(180deg); transition: 0.2s; }
+
+/* Detail Project CSS */
+.project-header { text-align: center; margin-bottom: 4rem; border-bottom: 2px dashed var(--terminal-dim); padding-bottom: 2rem; }
+.project-header h1 { font-size: 3.5rem; margin-bottom: 0.5rem; color: var(--terminal-alert); }
+.project-header div { font-size: 1.2rem; color: var(--terminal-green); }
+.content-block h2 { border-left: 5px solid var(--terminal-alert); padding-left: 1rem; margin-bottom: 1.5rem; color: var(--terminal-alert); font-size: 2rem; margin-top: 3rem; }
+.content-block p, .content-block ul { color: var(--text-body); }
+
+/* --- TIMELINE FIX (Add to Bottom) --- */
+
+/* 1. Container Garis Kiri */
+.timeline-section {
+    border-left: 2px solid var(--terminal-green); /* Garis Vertikal */
+    margin-left: 1rem;
+    padding-left: 2rem;
+    position: relative;
+}
+
+/* 2. Wrapper Per Item */
+.timeline-item {
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+/* 3. Label Tanggal (FIXED) */
+.timeline-date {
+    display: inline-block;
+    background-color: var(--monitor-bg);
+    color: var(--terminal-green);
+    border: 1px solid var(--terminal-green);
+    padding: 4px 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    
+    /* Trik Posisi: Geser ke kiri (negatif) tapi tetap dorong konten bawahnya */
+    position: relative; 
+    margin-left: -2.8rem; /* Geser agar menempel di garis */
+    margin-bottom: 0.8rem; /* Beri jarak ke judul di bawahnya */
+}
+
+/* 4. Judul Fase */
+.timeline-title {
+    color: var(--terminal-alert); /* Warna Kuning/Oranye */
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
 
 /* Animations */
 @keyframes loadOS { to { width: 100%; } }
@@ -159,7 +247,7 @@ html { scrollbar-width: auto; scrollbar-color: var(--terminal-dim) var(--monitor
 @keyframes scanline-scroll { 0% { background-position: 0% 0%; } 100% { background-position: 0% 100%; } }
 @keyframes tvScan { 0% { -webkit-mask-position: 0% 200%; mask-position: 0% 200%; } 100% { -webkit-mask-position: 0% 0%; mask-position: 0% 0%; } }
 
-/* Responsive */
+/* --- MOBILE RESPONSIVE --- */
 @media (max-width: 768px) {
     html { font-size: 14px; }
     .container { padding: 1rem; }
@@ -168,9 +256,23 @@ html { scrollbar-width: auto; scrollbar-color: var(--terminal-dim) var(--monitor
     .btn-back { font-size: 0.8rem !important; padding: 5px 10px !important; white-space: nowrap; border-width: 1px !important; }
     .btn-back i { font-size: 0.8rem; }
     .intro h1 { font-size: 2.5rem; line-height: 1.2; margin-bottom: 1rem; word-wrap: break-word; }
-    .project-header h1 { font-size: 1.8rem !important; line-height: 1.2 !important; margin-bottom: 1rem !important; word-wrap: break-word; }
-    .project-header div { font-size: 0.9rem !important; line-height: 1.4; display: flex; flex-direction: column; gap: 5px; }
+    
+    /* Project Header Fix (Override untuk detail proyek) */
+    .project-header h1 { 
+        font-size: 1.8rem !important; 
+        line-height: 1.2 !important; 
+        margin-bottom: 1rem !important; 
+        word-wrap: break-word; 
+    }
+    .project-header div { 
+        font-size: 0.9rem !important; 
+        line-height: 1.4; 
+        display: flex; 
+        flex-direction: column; 
+        gap: 5px; 
+    }
     .project-header div span:nth-child(2)::before { content: ""; margin: 0; }
+    
     .process-steps { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
     .step-item::after { content: ""; }
     .step-item { border: 1px solid var(--terminal-dim); padding: 8px; border-radius: 4px; background: rgba(0, 255, 0, 0.05); }
@@ -180,4 +282,13 @@ html { scrollbar-width: auto; scrollbar-color: var(--terminal-dim) var(--monitor
     .hud-decor-tr, .hud-decor-bl { display: none; }
     .profile-card-advanced { padding: 1rem; }
     .fab-btn { bottom: 1.5rem; right: 1.5rem; width: 45px; height: 45px; font-size: 1.2rem; }
+
+    .timeline-section {
+        margin-left: 0.5rem;
+        padding-left: 1.5rem;
+    }
+    .timeline-date {
+        margin-left: -2rem; /* Sesuaikan geseran di HP */
+        font-size: 0.8rem;
+    }
 }
